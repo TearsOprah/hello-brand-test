@@ -14,21 +14,99 @@
   height: 55px;
 }
 
-.header__nav {
+.navigation {
+  display: flex;
+  align-items: center;
   margin-right: 20px;
 }
 
-.header__nav-list {
+.navigation__container {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation__list {
   display: flex;
   list-style-type: none;
   gap: 45px;
 }
 
-.header__nav-item {
+.navigation__item {
 
 }
 
+.navigation__item_hidden {
+  display: none;
+}
+
 .header__phone-block {
-  display: flex;
-  gap: 11px;
+  cursor: pointer;
+    display: flex;
+    gap: 11px;
+}
+
+.burger-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 997;
+}
+
+@media (max-width: 1000px) {
+  .navigation__container {
+    display: none;
+    position: relative;
+  }
+
+  .burger-button {
+    display: block;
+  }
+
+  .navigation__container_active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    background-color: #fff;
+    z-index: 998;
+  }
+
+  .close-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+
+  .navigation__list {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navigation__item {
+    margin-bottom: 10px;
+  }
+
+  .header__phone-block_hidden {
+    display: none;
+  }
+
+  .overlay {
+    cursor: pointer;
+  }
 }
