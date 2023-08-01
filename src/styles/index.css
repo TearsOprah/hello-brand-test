@@ -6,6 +6,7 @@
   --secondary-text-color: #000;
   --blue-bg-color: #3A4574;
   --grey-color: #E7E7E7;
+  --gold-color: #D3B47F;
 }
 
 *,
@@ -40,8 +41,9 @@ h1 {
 
 body {
   font-family: 'Poppins', sans-serif;
-  max-width: var(--max-width);
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hovered {

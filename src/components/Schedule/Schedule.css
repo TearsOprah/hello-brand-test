@@ -19,6 +19,8 @@
   display: grid;
   grid-template-columns: 469px 1fr;
   gap: 32px;
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
 .schedule__list {

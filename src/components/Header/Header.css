@@ -7,6 +7,8 @@
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0;
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
 .header__logo {
@@ -108,7 +110,7 @@
 
   .navigation__item {
     margin-bottom: 10px;
-    color: #D3B47F;
+    color: var(--gold-color);
   }
 
   .header__phone-block {
