@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  padding-top: 55px;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -15,7 +15,7 @@
 }
 
 .header__nav {
-
+  margin-right: 20px;
 }
 
 .header__nav-list {

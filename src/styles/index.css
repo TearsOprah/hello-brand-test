@@ -1,0 +1,45 @@
+@import "./fonts.css";
+
+:root {
+  --max-width: 1208px;
+  --main-text-color: #FFFFFF;
+  --blue-bg-color: #3A4574;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+
