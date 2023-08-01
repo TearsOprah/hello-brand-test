@@ -3,7 +3,9 @@
 :root {
   --max-width: 1208px;
   --main-text-color: #FFFFFF;
+  --secondary-text-color: #000;
   --blue-bg-color: #3A4574;
+  --grey-color: #E7E7E7;
 }
 
 *,
