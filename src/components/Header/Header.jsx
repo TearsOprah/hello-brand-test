@@ -33,25 +33,25 @@ const Header = () => {
       <img className={'header__logo'} src={logoIcon} alt={'logo tzeezotje'}/>
       <nav className="navigation">
         <div className={`navigation__container ${isMenuOpen ? 'navigation__container_active' : ''}`}>
-          {isMenuOpen && <button className="close-button" onClick={closeMenu}>Закрыть</button>}
+          {isMenuOpen && <button className="close-button hovered" onClick={closeMenu}></button>}
           <ul className={'navigation__list'}>
-            <li className="navigation__item"><a>À la carte</a></li>
-            <li className="navigation__item"><a>Wijnkaart</a></li>
-            <li className="navigation__item"><a>Lunchmenu</a></li>
-            <li className="navigation__item"><a>Contact</a></li>
+            <li className="navigation__item hovered"><a>À la carte</a></li>
+            <li className="navigation__item hovered"><a>Wijnkaart</a></li>
+            <li className="navigation__item hovered"><a>Lunchmenu</a></li>
+            <li className="navigation__item hovered"><a>Contact</a></li>
           </ul>
           {isMenuOpen &&
-            <div className={'header__phone-block'}>
+            <div className={'header__phone-block hovered'}>
               <img src={phoneIcon} alt={'phone icon'} />
               <p>+32 9 282 57 25</p>
             </div>
           }
         </div>
-        <button className={`burger-button`} onClick={toggleMenu}>Меню</button>
+        <button className={`burger-button hovered`} onClick={toggleMenu}></button>
         {isMenuOpen && <div className="overlay" onClick={closeMenu}></div>}
       </nav>
       {!isMenuOpen &&
-        <div className={'header__phone-block header__phone-block_hidden'}>
+        <div className={'header__phone-block header__phone-block_hidden hovered'}>
           <img src={phoneIcon} alt={'phone icon'} />
           <p>+32 9 282 57 25</p>
         </div>

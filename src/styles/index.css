@@ -42,4 +42,13 @@ body {
   margin: 0 auto;
 }
 
+.hovered {
+  transition: all .5s ease;
+}
+
+.hovered:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+
 
