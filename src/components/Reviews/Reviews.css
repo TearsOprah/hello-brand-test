@@ -3,11 +3,13 @@
   background-color: var(--blue-bg-color);
   position: relative;
   width: 100vw;
-  /*max-width: var(--max-width);*/
-  /*margin: 0 auto;*/
   display: flex;
-  /*justify-content: center;*/
   align-items: center;
-  /*align-content: center;*/
+}
+
+@media (max-width: 1000px) {
+  .reviews {
+    height: 500px;
+  }
 }
 

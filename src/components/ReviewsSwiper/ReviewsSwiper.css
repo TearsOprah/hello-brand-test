@@ -42,7 +42,7 @@
 }
 
 .slide__author {
-  margin-top: 40px;
+  margin-top: 30px;
   color: var(--gold-color);
   text-align: center;
   font-size: 24px;
@@ -71,11 +71,11 @@
 }
 
 .custom-button.backward {
-  left: 0;
+  left: 18px;
 }
 
 .custom-button.forward {
-  right: 0;
+  right: 18px;
 }
 
 @media (max-width: 1000px) {
@@ -125,5 +125,18 @@
     margin-top: 20px;
     font-size: 18px;
     line-height: 30px;
+  }
+
+  .custom-button.backward {
+    left: 0;
+  }
+
+  .custom-button.forward {
+    right: 0;
+  }
+
+  .custom-button {
+    width: 50px;
+    height: 50px;
   }
 }
