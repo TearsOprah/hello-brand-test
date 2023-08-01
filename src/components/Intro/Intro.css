@@ -58,6 +58,13 @@
   border: none;
   padding: 38px 65px;
   color: var(--main-text-color);
+  transition: all .5s ease;
+}
+
+.intro__button:hover {
+  cursor: pointer;
+  background-color: var(--main-text-color);
+  color: var(--blue-bg-color);
 }
 
 .links-list {

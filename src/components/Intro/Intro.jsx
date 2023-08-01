@@ -11,10 +11,10 @@ const Intro = () => {
         <div className={'links-block'}>
           <button className={'intro__button'}>Reserve a table</button>
           <ul className={'links-list'}>
-            <li><a className={'link'}>Fb</a></li>
-            <li><a className={'link'}>Ig</a></li>
-            <li><a className={'link'}>Tw</a></li>
-            <li><a className={'link'}>Yt</a></li>
+            <li className={'hovered'}><a className={'link'}>Fb</a></li>
+            <li className={'hovered'}><a className={'link'}>Ig</a></li>
+            <li className={'hovered'}><a className={'link'}>Tw</a></li>
+            <li className={'hovered'}><a className={'link'}>Yt</a></li>
           </ul>
         </div>
       </div>
