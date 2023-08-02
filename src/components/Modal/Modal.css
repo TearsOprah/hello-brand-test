@@ -26,6 +26,7 @@
 .modal__success-message {
   font-size: 20px;
   color: green;
+  text-align: center;
 }
 
 .modal__closer {
