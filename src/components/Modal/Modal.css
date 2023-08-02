@@ -17,6 +17,15 @@
   border-radius: 20px;
   position: relative;
   width: 400px;
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__success-message {
+  font-size: 20px;
+  color: green;
 }
 
 .modal__closer {

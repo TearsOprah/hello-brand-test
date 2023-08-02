@@ -26,11 +26,11 @@ const ModalForm = ({ onSubmit }) => {
       <p className={'form__text'}>Reserve a table</p>
       <label className={'form__label'}>
         Name:
-        <input className={'form__input'} type="text" name="name" value={formData.name} onChange={handleInputChange} />
+        <input className={'form__input'} type="text" name="name" value={formData.name} onChange={handleInputChange} required={true} />
       </label>
       <label className={'form__label'}>
         Phone:
-        <input className={'form__input'} type="text" name="phone" value={formData.email} onChange={handleInputChange} />
+        <input className={'form__input'} type="text" name="phone" value={formData.email} onChange={handleInputChange} required={true} />
       </label>
       <button className={'form__button'} type="submit">Submit</button>
     </form>

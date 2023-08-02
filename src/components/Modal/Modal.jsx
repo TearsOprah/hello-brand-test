@@ -1,9 +1,11 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import './Modal.css';
 import Form from "../Form/Form.jsx";
 
 const Modal = ({ isModalOpen, handleCloseModal, handleEscapeKeyPress, handleOutsideClick }) => {
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+
   useEffect(() => {
     if (isModalOpen) {
       document.addEventListener('keydown', handleEscapeKeyPress);
@@ -16,17 +18,40 @@ const Modal = ({ isModalOpen, handleCloseModal, handleEscapeKeyPress, handleOuts
     };
   }, [isModalOpen, handleEscapeKeyPress]);
 
+  useEffect(() => {
+    if (!isModalOpen) {
+      setIsFormSubmitted(false);
+    }
+  }, [isModalOpen]);
+
   const handleSubmitForm = (formData) => {
-    // отправку данных через Ajax
-    console.log('Sending data:', formData);
-    handleCloseModal();
+    // Отправка данных через Ajax
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Response data:', data);
+        setIsFormSubmitted(true);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
   };
 
   return isModalOpen ? (
     <div className="modal-overlay" onClick={handleOutsideClick}>
       <div className="modal">
         <button className={'modal__closer hovered'} onClick={handleCloseModal}></button>
-        <Form onSubmit={handleSubmitForm} />
+        {isFormSubmitted ? (
+          <p className={'modal__success-message'}>Form submitted successfully!</p>
+        ) : (
+          <Form onSubmit={handleSubmitForm} />
+        )}
       </div>
     </div>
   ) : null;
