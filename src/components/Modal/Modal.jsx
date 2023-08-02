@@ -25,7 +25,7 @@ const Modal = ({ isModalOpen, handleCloseModal, handleEscapeKeyPress, handleOuts
   return isModalOpen ? (
     <div className="modal-overlay" onClick={handleOutsideClick}>
       <div className="modal">
-        <button onClick={handleCloseModal}>Закрыть</button>
+        <button className={'modal__closer hovered'} onClick={handleCloseModal}></button>
         <Form onSubmit={handleSubmitForm} />
       </div>
     </div>

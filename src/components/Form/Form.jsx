@@ -22,17 +22,17 @@ const ModalForm = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <p>Модальное окно - Простая форма</p>
-      <label>
+    <form className={'form'} onSubmit={handleSubmit}>
+      <p className={'form__text'}>Reserve a table</p>
+      <label className={'form__label'}>
         Name:
-        <input type="text" name="name" value={formData.name} onChange={handleInputChange} />
+        <input className={'form__input'} type="text" name="name" value={formData.name} onChange={handleInputChange} />
       </label>
-      <label>
+      <label className={'form__label'}>
         Phone:
-        <input type="text" name="phone" value={formData.email} onChange={handleInputChange} />
+        <input className={'form__input'} type="text" name="phone" value={formData.email} onChange={handleInputChange} />
       </label>
-      <button type="submit">Submit</button>
+      <button className={'form__button'} type="submit">Submit</button>
     </form>
   );
 };
