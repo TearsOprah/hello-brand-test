@@ -3,7 +3,7 @@ import scheduleImg from '../../assets/schedule-image.png';
 
 const Schedule = () => {
   return (
-    <section className={'schedule'}>
+    <section id={'schedule'} className={'schedule'}>
 
       <ul className={'schedule__list'}>
         <li className={'schedule__list-item'}>

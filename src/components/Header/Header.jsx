@@ -35,10 +35,10 @@ const Header = () => {
         <div className={`navigation__container ${isMenuOpen ? 'navigation__container_active' : ''}`}>
           {isMenuOpen && <button className="close-button hovered" onClick={closeMenu}></button>}
           <ul className={'navigation__list'}>
-            <li className="navigation__item hovered"><a>À la carte</a></li>
-            <li className="navigation__item hovered"><a>Wijnkaart</a></li>
-            <li className="navigation__item hovered"><a>Lunchmenu</a></li>
-            <li className="navigation__item hovered"><a>Contact</a></li>
+            <li className="navigation__item hovered"><a href={'#schedule'} onClick={closeMenu}>À la carte</a></li>
+            <li className="navigation__item hovered"><a href={'#reviews'} onClick={closeMenu}>Wijnkaart</a></li>
+            <li className="navigation__item hovered"><a onClick={closeMenu}>Lunchmenu</a></li>
+            <li className="navigation__item hovered"><a onClick={closeMenu}>Contact</a></li>
           </ul>
           {isMenuOpen &&
             <div className={'header__phone-block hovered'}>

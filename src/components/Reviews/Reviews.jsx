@@ -3,7 +3,7 @@ import ReviewsSwiper from "../ReviewsSwiper/ReviewsSwiper.jsx";
 
 const Reviews = () => {
   return (
-    <section className={'reviews'}>
+    <section id={'reviews'} className={'reviews'}>
       <ReviewsSwiper />
     </section>
   )
