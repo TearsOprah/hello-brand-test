@@ -47,6 +47,10 @@ a {
   user-select: none;
 }
 
+button:focus {
+  outline: none;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   display: flex;
