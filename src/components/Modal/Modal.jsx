@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './Modal.css';
+import Form from "../Form/Form.jsx";
 
 const Modal = ({ isModalOpen, handleCloseModal, handleEscapeKeyPress, handleOutsideClick }) => {
   useEffect(() => {
@@ -15,11 +16,17 @@ const Modal = ({ isModalOpen, handleCloseModal, handleEscapeKeyPress, handleOuts
     };
   }, [isModalOpen, handleEscapeKeyPress]);
 
+  const handleSubmitForm = (formData) => {
+    // отправку данных через Ajax
+    console.log('Sending data:', formData);
+    handleCloseModal();
+  };
+
   return isModalOpen ? (
     <div className="modal-overlay" onClick={handleOutsideClick}>
       <div className="modal">
-        <p>Модальное окно</p>
         <button onClick={handleCloseModal}>Закрыть</button>
+        <Form onSubmit={handleSubmitForm} />
       </div>
     </div>
   ) : null;
